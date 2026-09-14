@@ -33,4 +33,3 @@ The server runs over stdio and can be connected to by an MCP client.
 
 - `get_data` retrieves all users.
 - `create_user` creates a user with a name and nonnegative integer age.
-- `create_data` creates a user with a name and numeric age.

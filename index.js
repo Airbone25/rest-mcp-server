@@ -75,38 +75,6 @@ server.registerTool(
 )
 
 server.registerTool(
-    "create_data",
-    {
-        description: "Create user data in the database.",
-        inputSchema: z.object({
-            name: z.string(),
-            age: z.number()
-        }),
-    },
-    async ({name,age}) => {
-        const userData = await createData(name,age)
-        if (!userData) {
-            return {
-                content: [
-                    {
-                        type: "text",
-                        text: "Failed to add user data",
-                    },
-                ],
-            };
-        }
-        return {
-            content: [
-                {
-                    type: "text",
-                    text: "Created User Data!"
-                }
-            ]
-        }
-    }
-)
-
-server.registerTool(
     "create_user",
     {
         description: "Create a user in the database.",
